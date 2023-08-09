@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(68, 108, 109);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedorPrincipal{
+    background-color: rgb(36, 34, 34);
+    margin: auto;
+    width: 330px;
+    padding-top: 1px;
+
+}
+
+.titulo{
+    text-align: center;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.navegacion a{
+    margin: auto;
+}
+
+.div-nav{
+    margin: 10px;
+    padding: 10px;
+    border-color: aqua;
+    border-style: groove;
+}
+
+.publicaciones{
+    margin: auto 10px;
+    padding: 5px;
+}
+
+.publi{
+    background-color: cadetblue;
+    width: 300px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(225, 225, 225, 0.6);
+    transition: all .5s ease;
+}
+
+.publi:hover{
+    padding: 10px;
+    transform: rotate(4deg) translateY(-10px);
+}
+
+.publi p{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.publi-img{
+    height: 300px;
+    width: 300px;
+    background-color: cadetblue;
+    text-align: center;
+    margin: 10px auto;
+}
+
+h3{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0;
+}
+

@@ -1,0 +1,64 @@
+body{
+    background-color: cadetblue;
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+}
+
+.contenedor-principal{
+    width: 400px;
+    background-color: rgb(54, 73, 73);
+    border-radius: 10px;
+    margin: auto auto;
+    padding: 20px;
+    box-shadow: 0 8px 8px rgba(5, 4, 4, 0.767);
+
+}
+
+.contenedor-principal h1{
+    text-align: center;
+}
+
+.contenedor-principal button{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgb(224, 221, 216);
+    box-shadow: 0 4px 8px rgba(5, 4, 4, 0.767);
+
+}
+
+button{
+    background-color: rgb(74, 74, 209);
+    color: white;
+    border-radius: 10px;
+    margin: auto auto;
+    transition: all .5s ease;
+    box-shadow: 0 4px 8px rgba(5, 4, 4, 0.767);
+
+}
+button:hover{
+    background-color: rgb(59, 56, 109);
+    padding: 5px;
+}
+
+.input-text{
+    border: 2px solid rgb(80, 72, 72);
+    border-radius: 5px;
+    transition: all .5s ease;
+    background-color: hsla(0, 0%, 100%, 0.87);
+    box-shadow: 0 4px 8px rgba(5, 4, 4, 0.767);
+    
+}
+
+.input-text:hover{
+    padding: 3px;
+    
+}

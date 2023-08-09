@@ -1,13 +1,137 @@
-button
-{
-	color: red;
+html{
+	background-color: rgba(114, 89, 89, 0.829);
 }
 
-h1
-{
+h1{
 	color: blue;
 }
-textarea
-{
+
+textarea{
 	width: 800px;
+}
+
+button{
+	color: rgb(255,0,0);
+}
+
+.ejemplo{
+	color: yellow;
+}
+
+#boton3{
+	color: #0000ff;
+	background-color: aqua;
+}
+#boton1{
+	color: #ffffff;
+	background-color: red;
+	border-width: 5px;
+	border-color: #ffffff;
+	border-style: solid;
+	border-radius: 4px;
+	margin: 30px;
+	padding: 15px;
+}
+
+.texto{
+	border-width: 10px 20px;
+	padding: 10px;
+}
+
+.contenedor{
+	margin-top: 30px;
+	background-color: blanchedalmond;
+	text-align: center
+}
+
+.parra{
+	line-height: 30px;
+	text-decoration: underline;
+	font-size: 20px;
+	color: blueviolet;
+}
+
+.tabla{
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+th, td{
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+tr:nth-child(even){
+	background-color: brown;
+}
+
+.posiciones{
+	float: right;
+}
+
+span{
+	display: none; /*desaparece*/
+}
+
+a{
+	display: block;
+}
+
+.dis{
+	display: inline;
+}
+
+.contenedorCentrar{
+	background-color: burlywood;
+	width: 150px;
+	margin: auto;
+	text-align: center;
+}
+
+.animado{
+	width: 70px;
+	background-color: aqua;
+	transition: all 1s ease;
+}
+
+.animado:hover{
+	width: 150px;
+	background-color: blueviolet;
+}
+
+@keyframes deslizar{
+	from{
+		margin-left: 0;
+	}
+	to{
+		margin-left: 100%;
+	}
+}
+
+.animado{
+	animation-name: deslizar;
+	animation-duration: 2s;
+	animation-iteration-count: 4;
+	animation-direction: alternate;
+}
+
+.circle{
+	width: 200px;
+	height: 200px;
+	border: 2px solid rgb(129, 113, 113);
+	border-radius: 50%;
+	border-top: 3px solid white;
+	animation-name: rotar;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotar{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
 }
