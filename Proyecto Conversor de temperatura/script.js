@@ -1,18 +1,11 @@
-let num = 0;
 
-let contador = document.getElementsByClassName("contador")[0];
+let inputCel = document.getElementsByClassName("temp")[0];
 
-function aumentar() {
-    num++;
-    contador.innerHTML = num;
+let inputFar = document.getElementsByClassName("temp")[1];
+
+function conversion(inputCel) {
+    inputFar.innerHTML = inputCel * 2;
+
 }
 
-function disminuir() {
-    num--;
-    contador.innerHTML = num;
-}
-
-function reiniciar() {
-    num = 0;
-    contador.innerHTML = 0;
-}
+console.log(inputFar);
