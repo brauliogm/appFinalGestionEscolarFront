@@ -1,12 +1,7 @@
-function nombreDeFuncion(nombreParametro) {
-    alert("Primer Hola mundo! de " + nombreParametro + 
-    " entendiendo las funciones en JS");
+function evento() {
+    alert("Evento");
 }
 
-nombreDeFuncion("Braulio");
+let boton = document.getElementsByClassName("boton")[0];
 
-function suma(a, b) {
-    return a + b;
-}
-
-console.log(suma(3, 6));
+boton.addEventListener("click", evento);
