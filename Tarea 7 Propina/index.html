@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de Propina</title>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <h1 class="titulo">Calculadora de propina</h1>
+        
+        <form class="inputs" action="">
+            <label for="">$</label>
+            <input id="cantidad" onkeyup="calculoPropina(), calculoTotal()" type="text">
+            <br>
+            <label for="">%</label>
+            <input id="porcentaje" onkeyup="calculoPropina(), calculoTotal()" type="text">
+        </form>
+
+        <hr>
+
+        <div class="resultados">
+            <form class="output" action="">
+                <label for="">Propina</label>
+                <input id="propina" type="text" disabled>
+                <br>
+                <label for="">Total con Propina</label>
+                <input id="total" type="text" disabled>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
