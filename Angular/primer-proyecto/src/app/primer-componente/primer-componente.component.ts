@@ -7,4 +7,29 @@ import { Component } from '@angular/core';
 })
 export class PrimerComponenteComponent {
   ejemplo = "Interpolacion";
+
+  edad = 18;
+  mayor = false;
+
+  frutas = ["pera", "fresa", "melon"];
+
+  evaluacion = 3;
+
+  cursos = [
+    {
+      name: "HTML",
+      level: "Beginner",
+      color: "green"
+    },
+    {
+      name: "CSS",
+      level: "Beginner",
+      color: "red"
+    },
+    {
+      name: "JS",
+      level: "Beginner",
+      color: "blue"
+    }
+  ];
 }
