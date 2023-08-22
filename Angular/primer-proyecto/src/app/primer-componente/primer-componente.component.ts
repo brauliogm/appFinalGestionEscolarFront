@@ -32,4 +32,8 @@ export class PrimerComponenteComponent {
       color: "blue"
     }
   ];
+
+  mostrar = true
+
+  oscuro = true
 }

@@ -1,19 +1,34 @@
 <div *ngIf="mayor">
-    <p>primer-componente works!</p>
-    <br>
-    <button>{{ejemplo}}</button>
+    <div *ngIf="mayor">
+        <p>primer-componente works!</p>
+        <br>
+        <button>{{ejemplo}}</button>
+    </div>
+
+    <ul *ngIf="mayor">
+        <li *ngFor="let fruta of frutas" >{{fruta}}</li>
+    </ul>
+
+    <div [ngSwitch]="evaluacion" *ngIf="mayor">
+        <p *ngSwitchCase="1">Mostrando el parrafo 1</p>
+        <h1 *ngSwitchCase="2">Segundo parrafo de la zorrita</h1>
+        <button *ngSwitchDefault>Boton por default</button>
+    </div>
+
+
+    <ul *ngFor = "let curso of cursos">
+        <li [ngStyle]="{'background-color': curso.color}">{{curso.name}}</li>
+    </ul>
+
+    <div class="ngModel">
+        <input type="checkbox" [(ngModel)]="mostrar"> mostrar {{mostrar}} 
+
+        <button *ngIf="mostrar">Boton</button>
+    </div>
 </div>
 
-<ul *ngIf="mayor">
-    <li *ngFor="let fruta of frutas" >{{fruta}}</li>
-</ul>
+<div>
+    <input type="checkbox" [(ngModel)]="oscuro"> oscuro?
 
-<div [ngSwitch]="evaluacion" *ngIf="mayor">
-    <p *ngSwitchCase="1">Mostrando el parrafo 1</p>
-    <h1 *ngSwitchCase="2">Segundo parrafo de la zorrita</h1>
-    <button *ngSwitchDefault>Boton por default</button>
+    <button [ngClass]="oscuro ? 'oscuro' : 'claro'">Boton</button>
 </div>
-
-<ul *ngFor = "let curso of cursos">
-    <li [ngStyle]="{'background-color': curso.color}">{{curso.name}}</li>
-</ul>
