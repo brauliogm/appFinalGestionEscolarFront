@@ -1,14 +1,20 @@
 <div class="contenedor" *ngIf="!agregando">
   
-  <div class="notas" *ngFor="let nota of notas">
+  <div class="nota" *ngFor="let nota of notas">
     <span class="titulo">{{nota.titulo}}</span>
     <span class="contenido">{{nota.contenido}}</span>
   </div>
 
-  <button (click)="agregar()">Crear nota</button>
+  <button class="boton" (click)="cambioPantalla()">Crear nota</button>
 </div>
 
 <div class="contenedor" *ngIf="agregando">
-  Agregando notas
-  <button (click)="agregar()">Agregar nota</button>
+  <form class="formulario" action="">
+    <label for="">Titulo</label>
+    <input #titulo class="inputs" type="text">
+    <label for="">Contenido</label>
+    <textarea #contenido class="inputs" name="" id=""></textarea>
+  </form>
+  <button class="boton" (click)="agregar(titulo.value, contenido.value)">+Agregar</button>
+  <button style="background-color: rgb(165, 163, 163);" class="boton" (click)="cambioPantalla()">Cancelar</button>
 </div>

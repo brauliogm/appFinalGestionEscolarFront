@@ -15,7 +15,12 @@ export class AppComponent {
     this.notas.push({"titulo": "Ejemplo", "contenido": "Esta es una nota"})
   }
 
-  agregar(){
+  cambioPantalla(){
+    this.agregando = !this.agregando;
+  }
+
+  agregar(titulo: string, contenido: string){
+    this.notas.push({titulo, contenido});
     this.agregando = !this.agregando;
   }
 }
