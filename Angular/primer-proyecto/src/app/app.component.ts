@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Animal } from './Animal';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'primer-proyecto';
+
+  elefante: Animal = {Nombre: "Elefante", Tamanio: 8, Macho: true}
+  
+  
+  ngOnInit(){
+    console.log(this.elefante.Nombre);
+    
+  }
 }
