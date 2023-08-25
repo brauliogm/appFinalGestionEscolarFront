@@ -9,11 +9,12 @@ import { Animal } from './Animal';
 export class AppComponent {
   title = 'primer-proyecto';
 
-  elefante: Animal = {Nombre: "Elefante", Tamanio: 8, Macho: true}
+  elefante: Animal = new Animal("Pablo");
   
   
   ngOnInit(){
-    console.log(this.elefante.Nombre);
+    this.elefante.asignarTamanio(9);
+    console.log(this.elefante.Tamanio);
     
   }
 }
