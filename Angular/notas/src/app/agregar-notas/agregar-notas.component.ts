@@ -8,19 +8,32 @@ import { Router } from '@angular/router';
 })
 export class AgregarNotasComponent {
   notas: any;
+  
+  
 
-  constructor(private router: Router){  }
+  constructor(private router: Router) {  
+    console.log(this.notas);
+    this.notas = this.router.getCurrentNavigation()?.extras.state;
+    //this.notas = [];
+    console.log(this.notas);
+  }
+  
   
   ngOnInit(){
-    this.notas = [];
-    this.notas.push({"titulo": "Ejemplo", "contenido": "Esta es una nota"})
+    console.log(this.notas);
+    if (this.notas == undefined) {
+      this.notas = [];
+    }
+    console.log(this.notas);
   }
 
   agregar(){
-    this.router.navigate(['/lista'])
+    this.router.navigate(['/lista'], {state: this.notas})
   }
 
   agregarNota(titulo: string, contenido: string){
+    console.log(this.notas);
     this.notas.push({titulo, contenido});
+    this.agregar();
   }
 }

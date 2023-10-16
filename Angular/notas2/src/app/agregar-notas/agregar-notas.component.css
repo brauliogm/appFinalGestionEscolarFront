@@ -1,0 +1,60 @@
+.nota{
+    width: 70%;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: aqua;
+    border-radius: 5px;
+    border: 1px solid #0d3a2c6e;
+    box-shadow: 0 8px 8px 0 rgb(0, 0, 0, .2);
+}
+
+.contenedor{
+    padding: 50px 0;
+    width: 30%;
+    margin: 0 auto;
+    background-color: #EEE;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    font-size: 25px;
+    font-weight: 800;
+    display: block;
+    margin: 5px;
+    color: blueviolet;
+}
+
+.contenido{
+    margin: 5px;
+    font-size: 15px;
+    display: block;
+}
+
+button{
+    color: #EEE;
+    width: 60%;
+    padding: 5px;
+    margin: 0px auto 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(32, 32, 32);
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+input{
+    padding: 5px;
+    margin: 15px 5px;
+    background-color: #e7dede;
+    border-radius: 5px;
+    border: 1px solid #0d3a2c6e;
+}
+
+textarea{
+    padding: 5px;
+    margin: 5px;
+    background-color: #e7dede;
+    border-radius: 5px;
+    border: 1px solid #0d3a2c6e;
+}

@@ -1,0 +1,9 @@
+<div class="contenedor">
+    <div class="nota" *ngFor="let nota of notas">
+      <span class="titulo">{{nota.titulo}}</span>
+      <span class="contenido">{{nota.contenido}}</span>
+    </div>
+  
+    <button style="background-color: #b700ffb2;" (click)="agregar()">Agregar notas</button>
+  </div>
+  
