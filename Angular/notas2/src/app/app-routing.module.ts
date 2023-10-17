@@ -4,7 +4,7 @@ import { ListaNotasComponent } from './lista-notas/lista-notas.component';
 import { AgregarNotasComponent } from './agregar-notas/agregar-notas.component';
 
 const routes: Routes = [
-  { path: 'lista', component: ListaNotasComponent },
+  { path: '', component: ListaNotasComponent },
   { path: 'agregar', component: AgregarNotasComponent }
 ];
 

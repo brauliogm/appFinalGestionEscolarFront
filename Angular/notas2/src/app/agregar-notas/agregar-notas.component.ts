@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ArrayService } from '../array.service';
 
 @Component({
   selector: 'app-agregar-notas',
@@ -7,31 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./agregar-notas.component.css']
 })
 export class AgregarNotasComponent implements OnInit{
-  notas: any;
-  titulo: string = '';
-  contenido: string = '';
+  titulo: string;
+  contenido: string;
 
-  constructor(private router: Router){
-    console.log(this.notas);
-    this.notas = this.router.getCurrentNavigation()?.extras.state;
-    console.log(this.notas);
+  constructor(private router: Router,
+              private arrayService: ArrayService){
   }
 
   ngOnInit(){
-    console.log(this.notas);
-    if (this.notas == undefined  || this.notas == Object) {
-      this.notas = new Array
-    }
-    console.log(this.notas);
-    
-  }
-
-  agregar(){
-    this.router.navigate(['/lista'], {state: this.notas as Array<any>});
   }
 
   agregarNota(){
-    this.notas.push({"titulo": this.titulo, "contenido": this.contenido});
-    this.router.navigate(['/lista'], {state: this.notas as Array<any>});
+    this.arrayService.agregarNota({"titulo": this.titulo, "contenido": this.contenido});
+    this.router.navigate(['/']);
   }
+
+  cancelar(){
+    this.router.navigate(['/']);
+  }
+
 }
