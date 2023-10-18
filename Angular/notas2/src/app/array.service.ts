@@ -1,11 +1,8 @@
 // datos-compartidos.service.ts
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { Nota } from './nota.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ArrayService {
     notas: Array<Nota> = [];
 

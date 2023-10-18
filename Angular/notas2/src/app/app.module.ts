@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaNotasComponent } from './lista-notas/lista-notas.component';
 import { AgregarNotasComponent } from './agregar-notas/agregar-notas.component';
+import { ArrayService } from './array.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { AgregarNotasComponent } from './agregar-notas/agregar-notas.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ ArrayService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
