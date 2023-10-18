@@ -1,8 +1,10 @@
-<div class="contenedor">
-    Titulo <input type="text" [(ngModel)]="titulo">
-    Contenido <textarea [(ngModel)]="contenido"></textarea>
-    <br>
-  
-    <button style="background-color: #b700ffb2;" (click)="agregarNota()">+ Agregar</button>
-    <button style="background-color: rgb(206, 199, 199);" (click)="cancelar()">cancelar</button>
-  </div>
+<form (ngSubmit)="agregarNota()" ngNativeValidate>
+  <div class="contenedor">
+      Titulo <input type="text" [(ngModel)]="titulo" requireds minlength="2" name="titulo">
+      Contenido <textarea [(ngModel)]="contenido" required minlength="2" name="contenido"></textarea>
+      <br>
+    
+      <button type="submit" style="background-color: #b700ffb2;">+ Agregar</button>
+      <button style="background-color: rgb(206, 199, 199);" (click)="cancelar()">cancelar</button>
+    </div>  
+</form>
