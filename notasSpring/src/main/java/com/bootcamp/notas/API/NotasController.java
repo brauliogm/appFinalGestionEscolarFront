@@ -23,7 +23,8 @@ public class NotasController {
 
     @GetMapping("/test")
     Notas notas(){
-        Notas nuevaNota = new Notas(1L, "Nota", "Contenido");
+        Notas nuevaNota = new Notas(6L, "Nota", "Contenido");
+        notasService.createNota(nuevaNota);
         return nuevaNota;
     }
 
