@@ -35,8 +35,8 @@ export class ListaNotasComponent implements OnInit{
   eliminarNota(index: number){
     this.http.delete(`/notas/${index}`).subscribe(
       (data) => {
-        console.log('Eliminación exitosa', data);
-        console.log(index);
+        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.router.onSameUrlNavigation = 'reload';
         this.router.navigate(['/']);
       }
     )
