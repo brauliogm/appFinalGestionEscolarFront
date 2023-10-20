@@ -43,6 +43,15 @@ button{
     cursor: pointer;
 }
 
+.botonEliminar{
+    color: white;
+    background-color: red;
+    margin: auto;
+    width: auto;
+    border-radius: 50%;
+    display: flex;
+}
+
 input{
     padding: 5px;
     margin: 15px 5px;

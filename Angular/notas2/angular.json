@@ -63,7 +63,8 @@
               "browserTarget": "notas2:build:production"
             },
             "development": {
-              "browserTarget": "notas2:build:development"
+              "browserTarget": "notas2:build:development",
+              "proxyConfig": "src/proxi.conf.json"
             }
           },
           "defaultConfiguration": "development"

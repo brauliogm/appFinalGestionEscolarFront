@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ListaNotasComponent } from './lista-notas/lista-notas.component';
 import { AgregarNotasComponent } from './agregar-notas/agregar-notas.component';
 import { ArrayService } from './array.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ArrayService } from './array.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ ArrayService ],
   bootstrap: [AppComponent]
