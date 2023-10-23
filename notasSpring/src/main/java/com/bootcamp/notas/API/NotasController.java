@@ -21,13 +21,6 @@ public class NotasController {
         return notasService.getAllNotas();
     }
 
-    @GetMapping("/test")
-    Notas notas(){
-        Notas nuevaNota = new Notas(6L, "Nota", "Contenido");
-        notasService.createNota(nuevaNota);
-        return nuevaNota;
-    }
-
     @PostMapping
     public void createNota(@RequestBody Notas notas){
         notasService.createNota(notas);
