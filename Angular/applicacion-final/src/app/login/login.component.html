@@ -1,0 +1,10 @@
+<div class="contenedor">
+    <form (ngSubmit)="autenticar()">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" [(ngModel)]="login.username">
+        <label for="contrasena">Contrasena</label>
+        <input type="text" id="contrasena" name="contrasena" [(ngModel)]="login.password">
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
