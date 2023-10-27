@@ -1,1 +1,12 @@
-<p>libros works!</p>
+<div class="contenedor">
+    <button (click)="agregar()">+ Agregar Libro</button>
+</div>
+
+<div *ngIf="agregando">
+    <form>
+        <div class="contenedor">
+            Titulo <input type="text" [(ngModel)]="libro.titulo">
+            Autor <input type="text" [(ngModel)]="libro.autor">
+        </div>
+    </form>
+</div>
