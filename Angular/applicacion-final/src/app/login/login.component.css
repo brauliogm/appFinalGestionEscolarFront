@@ -21,3 +21,6 @@ input[type=submit]{
     margin: 0 auto;
 }
 
+.invalido{
+    color: red;
+}

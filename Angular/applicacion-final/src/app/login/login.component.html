@@ -3,8 +3,11 @@
         <label for="usuario">Usuario</label>
         <input type="text" id="usuario" name="usuario" [(ngModel)]="login.username">
         <label for="contrasena">Contrasena</label>
-        <input type="text" id="contrasena" name="contrasena" [(ngModel)]="login.password">
+        <input type="password" id="contrasena" name="contrasena" [(ngModel)]="login.password">
 
         <input type="submit" value="Submit">
     </form>
+    <div *ngIf="this.invalido">
+        <p class="invalido">El usuario o la contrasena esta incorrecto</p>
+    </div>
 </div>
