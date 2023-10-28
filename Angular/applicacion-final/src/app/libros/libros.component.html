@@ -1,12 +1,21 @@
-<div class="contenedor">
-    <button (click)="agregar()">+ Agregar Libro</button>
+<div class="contenedor" *ngIf="!this.agregando">
+    <div *ngFor="let libro of libros">
+        <div *ngIf="libro.titulo" class="libro">
+            <span class="titulo">{{libro.titulo}}</span>
+            <span class="autor">{{libro.autor}}</span>
+        </div>
+    </div>
+    <button class="azul" (click)="agregar()">+ Agregar Libro</button>
 </div>
 
-<div *ngIf="agregando">
-    <form>
+<div *ngIf="this.agregando">
+    <form (ngSubmit)="agregarLibro()" ngNativeValidate>
         <div class="contenedor">
-            Titulo <input type="text" [(ngModel)]="libro.titulo">
-            Autor <input type="text" [(ngModel)]="libro.autor">
+            Titulo <input type="text" name="titulo" [(ngModel)]="libro.titulo" required minlength="5">
+            Autor <input type="text" name="autor" [(ngModel)]="libro.autor" required minlength="5">
+            <br>
+            <button type="submit" class="azul">+ Agregar</button>
+            <button class="gris" (click)="agregar()">Cancelar</button>
         </div>
     </form>
 </div>
