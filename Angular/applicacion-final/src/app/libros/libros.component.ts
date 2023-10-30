@@ -63,4 +63,25 @@ export class LibrosComponent {
       }
     )
   }
+
+  asignar(libroId: string){
+    var estudianteId = prompt("Escribe el Id del estudiante que quieres asignar a este libro");
+    let up = localStorage.getItem("username") + ":" + localStorage.getItem("password");
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'X-Requested-With': 'XMLHttpRequest',
+        'Authorization': 'Basic ' + btoa(up)
+      })
+    };
+    this.http.put("/api/v1/estudiantes/" + estudianteId + "/libros/" + libroId, {}, httpOptions).subscribe(
+      (data)=>{
+        console.log(data);
+        this.ngOnInit();
+        
+      },
+      (error) => {
+        console.error('Error en la solicitud:', error);
+      }
+    )
+  }
 }

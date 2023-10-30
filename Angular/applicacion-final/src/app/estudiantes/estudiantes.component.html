@@ -1,1 +1,15 @@
-<p>estudiantes works!</p>
+<div class="contenedor">
+    <h1>Lista de Estudiantes</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Email</th>
+        </tr>
+        <tr *ngFor="let estudiante of estudiantes">
+            <td class="atributo">{{estudiante.id}}</td>
+            <td class="atributo">{{estudiante.nombre.primerApellido}} {{estudiante.nombre.primerNombre}}</td>
+            <td class="atributo">{{estudiante.email}}</td>
+        </tr>
+    </table>
+</div>

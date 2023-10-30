@@ -59,3 +59,21 @@ button{
     border: 1px solid #0d3a2c6e;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
 }
+
+.asignar{
+    display: block;
+    float: right;
+    font-size: 40px;
+    cursor: pointer;
+    color: rgb(0, 67, 125);
+}
+
+.prestado{
+    background-color: rgb(210, 99, 99);
+}
+
+.nombre{
+    font-style: italic;
+    font-size: small;
+    font-weight: 700;
+}

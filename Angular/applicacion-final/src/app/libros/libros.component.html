@@ -1,8 +1,11 @@
 <div class="contenedor" *ngIf="!this.agregando">
     <div *ngFor="let libro of libros">
-        <div *ngIf="libro.titulo" class="libro">
+        <div *ngIf="libro.titulo" [ngClass]="libro.estudiante ? 'libro prestado': 'libro'">
+            <span class="asignar" *ngIf="!libro.estudiante" (click)="asignar(libro.id)">+</span>
             <span class="titulo">{{libro.titulo}}</span>
             <span class="autor">{{libro.autor}}</span>
+            <span class="nombre" *ngIf="libro.estudiante">Prestado a {{libro.estudiante.nombre.primerNombre}} {{libro.estudiante.nombre.primerApellido}}</span>
+            <span *ngIf="!libro.estudiante">Disponible</span>
         </div>
     </div>
     <button class="azul" (click)="agregar()">+ Agregar Libro</button>
