@@ -1,5 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Estudiante } from '../modelos/estudiante';
 
 @Component({
   selector: 'app-estudiantes',
@@ -8,13 +10,19 @@ import { Component } from '@angular/core';
 })
 export class EstudiantesComponent {
 
+  agregar: boolean;
   estudiantes: any;
+  estudiante: Estudiante;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private router: Router
+    ) {
     
   }
 
   ngOnInit(){
+    this.estudiante = {} as Estudiante;
+    this.agregar = false;
     let up = localStorage.getItem("username") + ":" + localStorage.getItem("password");
     const httpOptions = {
       headers: new HttpHeaders({
@@ -31,5 +39,14 @@ export class EstudiantesComponent {
         console.error('Error en la solicitud:', error);
       }
     )
+  }
+
+  agregarEstudiante(){
+    this.agregar = true;
+
+  }
+
+  cancelar(){
+    this.agregar = !this.agregar;
   }
 }

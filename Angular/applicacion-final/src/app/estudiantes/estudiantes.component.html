@@ -12,4 +12,17 @@
             <td class="atributo">{{estudiante.email}}</td>
         </tr>
     </table>
+
+    <button  *ngIf="!agregar" (click)="cancelar()">Crear nuevo estudiante</button>
+
+    <form *ngIf="agregar" (ngSubmit)="agregarEstudiante()" ngNativeValidate>
+        <div class="contenedor">
+            Primer nombre <input type="text" name="titulo" [(ngModel)]="estudiante.primerNombre" required minlength="5">
+            Primer nombre <input type="text" name="autor" [(ngModel)]="estudiante.primerApellido" required minlength="5">
+            Email <input type="text" name="autor" [(ngModel)]="estudiante.email" required minlength="5">
+            <br>
+            <button type="submit" class="azul">+ Agregar</button>
+            <button class="gris" (click)="cancelar()">Cancelar</button>
+        </div>
+    </form>
 </div>
