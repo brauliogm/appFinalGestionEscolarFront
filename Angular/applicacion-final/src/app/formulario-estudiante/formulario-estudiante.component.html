@@ -1,0 +1,13 @@
+<div class="contenedor">
+    <form (ngSubmit)="mostrarModificar ? modificarEstudiante() : agregarEstudiante()" ngNativeValidate>
+        <div class="contenedor">
+            Primer nombre <input type="text" name="primerNombre" [(ngModel)]="estudiante.nombre.primerNombre" required minlength="5">
+            Primer apellido <input type="text" name="primerApellido" [(ngModel)]="estudiante.nombre.primerApellido" required minlength="5">
+            Email <input type="text" name="email" [(ngModel)]="estudiante.email" required minlength="5">
+            <br>
+            <button *ngIf="!mostrarModificar" type="submit" class="azul">+ Agregar</button>
+            <button *ngIf="mostrarModificar" type="submit" class="azul">Modificar</button>
+            <button class="gris" (click)="cancelar()">Cancelar</button>
+        </div>
+    </form>
+</div>

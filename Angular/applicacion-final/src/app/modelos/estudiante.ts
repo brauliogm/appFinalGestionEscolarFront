@@ -1,5 +1,7 @@
+import { Nombre } from "./nombre";
+
 export interface Estudiante{
-    primerNombre: string;
-    primerApellido: string;
+    nombre: Nombre;
     email: string;
+    fechaNacimiento: Date;
 }

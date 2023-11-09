@@ -11,6 +11,8 @@ import { EstudiantesComponent } from './estudiantes/estudiantes.component';
 import { LibrosComponent } from './libros/libros.component';
 import { MateriasComponent } from './materias/materias.component';
 import { HeaderComponent } from './header/header.component';
+import { FormularioEstudianteComponent } from './formulario-estudiante/formulario-estudiante.component';
+import { ComunicacionServices } from './comunicacion.service';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { HeaderComponent } from './header/header.component';
     EstudiantesComponent,
     LibrosComponent,
     MateriasComponent,
-    HeaderComponent
+    HeaderComponent,
+    FormularioEstudianteComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ComunicacionServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
